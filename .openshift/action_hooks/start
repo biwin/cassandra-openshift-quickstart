@@ -18,8 +18,8 @@ export HEAP_NEWSIZE
 # export JAVA_HOME="$OPENSHIFT_DATA_DIR/jdk1.8.0_05"
 # export PATH=$OPENSHIFT_DATA_DIR/jdk1.8.0_05/bin:$PATH
 
-export JAVA_HOME=/usr/bin/java
-export PATH=$PATH:$JAVA_HOME/bin
+export JAVA_HOME=/etc/alternatives/java_sdk_1.8.0
+export PATH=$JAVA_HOME/bin:$PATH
 
 cd $OPENSHIFT_DATA_DIR/cassandra
 bin/cassandra |& /usr/bin/logshifter -tag classcarddbsessions &
